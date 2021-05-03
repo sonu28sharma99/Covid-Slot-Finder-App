@@ -11,6 +11,7 @@ import {
 } from '@material-ui/pickers';
 import Button from '@material-ui/core/Button';
 import format from 'date-fns/format'
+import Pagination from '@material-ui/lab/Pagination'
 
 import {states} from './constants/states';
 import {getResults} from './services/results';
@@ -25,7 +26,8 @@ const App = () => {
   const [age, setAge] = useState('');
   const [pin, setPin] = useState('');
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState(null);
+  const [currPage, setCurrPage] = useState(1);
 
   const getDistricts = async (event) => {
     try {
@@ -81,8 +83,12 @@ const App = () => {
     getFinalResults();
   }
 
+  const onPageChange = (event, page) => {
+    setCurrPage(page);
+  }
+
   return(
-    <div style={{flex: 1, paddingTop: '30px'}}>
+    <div style={{flex: 1, paddingTop: '30px', paddingBottom: '30px'}}>
       <form onSubmit={handleFormSubmit}>
         <Grid container spacing={3} style={{paddingRight: '350px', paddingLeft: '30px'}}>
           <Grid item xs={12} md={6} lg={6} sm={12}>
@@ -179,7 +185,23 @@ const App = () => {
           </Grid>
         </Grid>
       </form>
-      {results.length > 0 && <Results results={results} />}
+      {results && <Results results={results} currPage={currPage} />}
+      {results && 
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            // marginBottom: '30px',
+          }}
+        >
+          <Pagination count={Math.ceil(results.length/15)} color='primary' size='large' onChange={onPageChange}
+            // style={{
+            //   alig
+            // }}
+          />
+        </div>
+      }
     </div>
   );
   
