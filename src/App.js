@@ -21,13 +21,13 @@ const App = () => {
   const [stateList] = useState(states);
   const [districtList, setDistrictList] = useState([]);
   const [selectedStateObj, setSelectedStateObj] = useState("");
-  const [loading, setLoading] = useState(false);
   const [selectedDistrictObj, setSelectedDistrictObj] = useState("");
   const [age, setAge] = useState('');
   const [pin, setPin] = useState('');
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [results, setResults] = useState(null);
   const [currPage, setCurrPage] = useState(1);
+  // const [showRes, setShowRes] = useState(false);
 
   const getDistricts = async (event) => {
     try {
@@ -46,35 +46,52 @@ const App = () => {
   }
 
   const handleStateChange = (event) => {
+    // if(showRes)
+    //   setShowRes(false);
     setSelectedStateObj(event.target.value);
     getDistricts(event);
   }
 
   const handleDistrictChange = (event) => {
+    // if(showRes)
+    //   setShowRes(false);
     setSelectedDistrictObj(event.target.value);
   }
 
-  const handleDateChange = (date) => setSelectedDate(date);
-  const handlePinInput = e => setPin(e.target.value);
-  const handleAgeInput = e => setAge(e.target.value);
+  const handleDateChange = (date) => {
+    // if(showRes)
+    //   setShowRes(false);
+    setSelectedDate(date);
+  }
+
+  const handlePinInput = e => {
+    // if(showRes)
+    //   setShowRes(false);
+    setPin(e.target.value);
+  }
+  const handleAgeInput = e => {
+    // if(showRes)
+    //   setShowRes(false);
+    setAge(e.target.value);
+  }
 
   const getFinalResults = async () => {
     const date = format(new Date(selectedDate), 'dd-MM-yyyy');
-    setLoading(true);
     const resultsList = await getResults(pin, date, selectedDistrictObj.district_id);
-    if(resultsList && resultsList.length !== 0) {
+    if(resultsList) {
       if(age.trim() !== '') {
         const final = resultsList.filter(session => {
           return +age >= session.min_age_limit;
         });
-        console.log(final);
+        // console.log(final);
         setResults(final);
+        // setShowRes(true);
       }
       else {
         setResults(resultsList);
+        // setShowRes(true);
       }
     }
-    setLoading(false);
   }
 
   const handleFormSubmit = (e) => {

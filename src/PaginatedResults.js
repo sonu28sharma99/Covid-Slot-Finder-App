@@ -7,13 +7,16 @@ import { Grid } from '@material-ui/core';
 // name, min_age_limit, vaccine, capacity, fee_type, fee
 const SessionCard = ({name, vaccine, min_age, paid, capacity, fee}) => {
   return (
-    <Card style={{backgroundColor: '#3f51b519', minWidth: '160px'}}>
+    <Card style={{backgroundColor: '#3f51b519', minWidth: '160px', height: '180px'}}>
       <CardContent>
-        <h4 style={{
-          marginTop: '0px',
-        }}>
-          {name}
-        </h4>
+        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: '-20px'}}>
+          <h4>
+            {name}
+          </h4>
+          <h4 style={{marginLeft: '10px'}}>
+            {paid ? 'Paid' : "Free"}
+          </h4>
+        </div>
         <h6 style={{
           marginTop: '-12px',
         }}>

@@ -18,8 +18,8 @@ export const getResults = async (pin, date, id) => {
         }
     }
     else {
-        const res = getSlotsByDistrict(id, date);
-
+        const res = await getSlotsByDistrict(id, date);
+        // console.log(res);
         return res;
     }
 }
