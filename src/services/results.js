@@ -8,11 +8,14 @@ export const getResults = async (pin, date, id) => {
     if(pin.trim() !== '') {
         const distRes = await getSlotsByDistrict(id, date);
         const pinRes = await getSlotsByPin(pin, date);
-        let filterDist;
-        if(distRes.length > 0 && pinRes.length > 0) {
-            filterDist = distRes.filter(session => {
-                return session.pincode !== pin;
-            });
+        let filterDist = [];
+        if(distRes && pinRes) {
+            // console.log('1');
+            if(distRes.length > 0) {
+                filterDist = distRes.filter(session => {
+                    return session.pincode !== pin;
+                });
+            }
             // console.log(filterDist);
             return [...pinRes, ...filterDist];
         }
