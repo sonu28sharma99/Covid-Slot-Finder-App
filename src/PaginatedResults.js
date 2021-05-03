@@ -7,7 +7,7 @@ import { Grid } from '@material-ui/core';
 // name, min_age_limit, vaccine, capacity, fee_type, fee
 const SessionCard = ({name, vaccine, min_age, paid, capacity, fee}) => {
   return (
-    <Card style={{backgroundColor: '#3f51b542', minWidth: '150px'}}>
+    <Card style={{backgroundColor: '#3f51b519', minWidth: '160px'}}>
       <CardContent>
         <h4 style={{
           marginTop: '0px',
@@ -44,7 +44,7 @@ const SessionCard = ({name, vaccine, min_age, paid, capacity, fee}) => {
 export const PaginatedResults = ({sessions}) => {
   return (
     <Grid container spacing={4} style={{
-      paddingRight: '20px',
+      paddingRight: '10px',
       marginBottom: '20px',
       width: '90%',
       // backgroundColor: 'yellow'

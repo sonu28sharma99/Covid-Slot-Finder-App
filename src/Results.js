@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { PaginatedResults } from './PaginatedResults';
 
 
@@ -12,10 +12,14 @@ const Results = ({results, currPage}) => {
 
   return (
     <div style={{marginTop: '45px', paddingLeft: '25px'}}>
-      <h2 style={{marginBottom: '35px'}}>Available Slots:</h2>
-      {/* <div style={{display: 'flex', justifyContent: 'center'}}> */}
-      <PaginatedResults sessions={currResults} />
-      {/* </div> */}
+      {results.length !== 0 ? (
+        <>
+          <h2 style={{marginBottom: '35px'}}>Available Slots:</h2>
+          <PaginatedResults sessions={currResults} />
+        </>
+      ) : (
+        <h2 style={{color: 'red'}}>Sorry. We could not find any slots. Try something else.</h2>
+      )}
     </div>
   );
 }
