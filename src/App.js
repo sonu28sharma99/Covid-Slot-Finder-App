@@ -46,32 +46,22 @@ const App = () => {
   }
 
   const handleStateChange = (event) => {
-    // if(showRes)
-    //   setShowRes(false);
     setSelectedStateObj(event.target.value);
     getDistricts(event);
   }
 
   const handleDistrictChange = (event) => {
-    // if(showRes)
-    //   setShowRes(false);
     setSelectedDistrictObj(event.target.value);
   }
 
   const handleDateChange = (date) => {
-    // if(showRes)
-    //   setShowRes(false);
     setSelectedDate(date);
   }
 
   const handlePinInput = e => {
-    // if(showRes)
-    //   setShowRes(false);
     setPin(e.target.value);
   }
   const handleAgeInput = e => {
-    // if(showRes)
-    //   setShowRes(false);
     setAge(e.target.value);
   }
 

@@ -11,11 +11,11 @@ const Results = ({results, currPage}) => {
     <div style={{marginTop: '45px', paddingLeft: '25px'}}>
       {results.length !== 0 ? (
         <>
-          <h2 style={{marginBottom: '35px'}}>Available Slots:</h2>
+          <h2 style={{marginBottom: '35px'}}>Available Centers:</h2>
           <PaginatedResults sessions={currResults} />
         </>
       ) : (
-        <h2 style={{color: 'red'}}>Sorry. We could not find any slots. Try something else.</h2>
+        <h2 style={{color: 'red'}}>No slots available for the details you provided. Try something else.</h2>
       )}
     </div>
   );
