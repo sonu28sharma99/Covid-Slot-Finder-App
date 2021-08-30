@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/covid-vaccination-slots/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/covid-vaccination-slots/static/js/main.5372d78c.chunk.js",
-    "main.js.map": "/covid-vaccination-slots/static/js/main.5372d78c.chunk.js.map",
-    "runtime-main.js": "/covid-vaccination-slots/static/js/runtime-main.836ea741.js",
-    "runtime-main.js.map": "/covid-vaccination-slots/static/js/runtime-main.836ea741.js.map",
-    "static/js/2.0fd0b87a.chunk.js": "/covid-vaccination-slots/static/js/2.0fd0b87a.chunk.js",
-    "static/js/2.0fd0b87a.chunk.js.map": "/covid-vaccination-slots/static/js/2.0fd0b87a.chunk.js.map",
-    "index.html": "/covid-vaccination-slots/index.html",
-    "static/css/main.2ae47eeb.chunk.css.map": "/covid-vaccination-slots/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.0fd0b87a.chunk.js.LICENSE.txt": "/covid-vaccination-slots/static/js/2.0fd0b87a.chunk.js.LICENSE.txt"
+    "main.css": "/Covid-Slot-Finder-App/static/css/main.2ae47eeb.chunk.css",
+    "main.js": "/Covid-Slot-Finder-App/static/js/main.5372d78c.chunk.js",
+    "main.js.map": "/Covid-Slot-Finder-App/static/js/main.5372d78c.chunk.js.map",
+    "runtime-main.js": "/Covid-Slot-Finder-App/static/js/runtime-main.40b6e3b0.js",
+    "runtime-main.js.map": "/Covid-Slot-Finder-App/static/js/runtime-main.40b6e3b0.js.map",
+    "static/js/2.0fd0b87a.chunk.js": "/Covid-Slot-Finder-App/static/js/2.0fd0b87a.chunk.js",
+    "static/js/2.0fd0b87a.chunk.js.map": "/Covid-Slot-Finder-App/static/js/2.0fd0b87a.chunk.js.map",
+    "index.html": "/Covid-Slot-Finder-App/index.html",
+    "static/css/main.2ae47eeb.chunk.css.map": "/Covid-Slot-Finder-App/static/css/main.2ae47eeb.chunk.css.map",
+    "static/js/2.0fd0b87a.chunk.js.LICENSE.txt": "/Covid-Slot-Finder-App/static/js/2.0fd0b87a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.836ea741.js",
+    "static/js/runtime-main.40b6e3b0.js",
     "static/js/2.0fd0b87a.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
     "static/js/main.5372d78c.chunk.js"
