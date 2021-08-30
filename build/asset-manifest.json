@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/covid-vaccination-slots/static/css/main.2ae47eeb.chunk.css",
+    "main.js": "/covid-vaccination-slots/static/js/main.524fb329.chunk.js",
+    "main.js.map": "/covid-vaccination-slots/static/js/main.524fb329.chunk.js.map",
+    "runtime-main.js": "/covid-vaccination-slots/static/js/runtime-main.836ea741.js",
+    "runtime-main.js.map": "/covid-vaccination-slots/static/js/runtime-main.836ea741.js.map",
+    "static/js/2.598a6072.chunk.js": "/covid-vaccination-slots/static/js/2.598a6072.chunk.js",
+    "static/js/2.598a6072.chunk.js.map": "/covid-vaccination-slots/static/js/2.598a6072.chunk.js.map",
+    "index.html": "/covid-vaccination-slots/index.html",
+    "static/css/main.2ae47eeb.chunk.css.map": "/covid-vaccination-slots/static/css/main.2ae47eeb.chunk.css.map",
+    "static/js/2.598a6072.chunk.js.LICENSE.txt": "/covid-vaccination-slots/static/js/2.598a6072.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.836ea741.js",
+    "static/js/2.598a6072.chunk.js",
+    "static/css/main.2ae47eeb.chunk.css",
+    "static/js/main.524fb329.chunk.js"
+  ]
+}
